@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>热连轧分区冷却装置及测控系统</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f6f8;
+    color: #222;
+    line-height: 1.8;
+    -webkit-user-select: none;
+    user-select: none; 
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 8px;
+  }
+  h2 {
+    font-size: 17px;
+    margin: 28px 0 12px;
+    padding-left: 10px;
+    border-left: 4px solid #2f6fed;
+  }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .figure {
+    margin: 18px 0;
+    text-align: center;
+  }
+  .figure img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
+  .figure .caption {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  @media (max-width: 600px) {
+    body { padding: 10px; }
+    .container { padding: 18px 14px; }
+    h1 { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>热连轧分区冷却装置及测控系统</h1>
+
+  <h2>一、装置设计与搭建</h2>
+  <p>使用 SolidWorks 独立完成热轧分区冷却模拟装置的结构设计与搭建。</p>
+
+  <div class="grid-2">
+    <div class="figure">
+      <img src="6.jpg" alt="装置图 a">
+    </div>
+  </div>
+
+  <h2>二、软件开发</h2>
+  <p>使用 C# 独立开发离线与在线两套软件，集成温度场模型、热辊型模型、辊系弹性变形模型、板形板凸度模型及水量反算计算，并实现水印模拟云图显示；软件可适配多种轧制产线与工况，用于分区冷却架设计及气动阀开启比例设定。</p>
+
+  <div class="grid-2">
+    <div class="figure">
+      <img src="30.png" alt="软件界面 a">
+      <div class="caption">(a) 离线主界面</div>
+    </div>
+  </div>
+
+  <h2>三、数据分析与仿真</h2>
+  <ul>
+    <li>利用 Origin 与 Matlab 对实验数据进行回归分析，标定换热系数；</li>
+    <li>运用 Ansys Fluent 对喷嘴水量干涉进行流体仿真，筛选最优喷嘴分布方案。</li>
+  </ul>
+  <div class="grid-2">
+    <div class="figure">
+      <img src="31.png" alt="数据分析 a">
+      <div class="caption">(a) 离线主界面</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
