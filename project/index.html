@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>热连轧分区冷却装置及测控系统</title>
+
+<!-- 预加载图片，让浏览器尽早开始下载 -->
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/6.jpg">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/30.jpg">
+<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/31.jpg">
+
 <style>
   * { box-sizing: border-box; }
   body {
@@ -14,7 +20,7 @@
     color: #222;
     line-height: 1.8;
     -webkit-user-select: none;
-    user-select: none; 
+    user-select: none;
   }
   .container {
     max-width: 900px;
@@ -43,8 +49,12 @@
   }
   .figure img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
     border: 1px solid #e5e7eb;
+    /* 图片未加载完时，先占位，避免布局跳动 */
+    min-height: 200px;
+    background: #f0f2f5;
   }
   .figure .caption {
     font-size: 13px;
@@ -73,7 +83,10 @@
 
   <div class="grid-2">
     <div class="figure">
-      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/6.jpg">
+      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/6.jpg"
+           alt="装置设计图"
+           loading="eager"
+           width="800" height="600">
     </div>
   </div>
 
@@ -82,7 +95,10 @@
 
   <div class="grid-2">
     <div class="figure">
-      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/30.jpg">
+      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/30.jpg"
+           alt="软件界面"
+           loading="lazy"
+           width="800" height="600">
     </div>
   </div>
 
@@ -93,7 +109,10 @@
   </ul>
   <div class="grid-2">
     <div class="figure">
-      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/31.jpg">
+      <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/31.jpg"
+           alt="数据分析图"
+           loading="lazy"
+           width="800" height="600">
     </div>
   </div>
 
