@@ -75,16 +75,19 @@
   }
 
   .figure img {
-    position: relative;   /* 让 z-index 生效，盖住占位文字 */
-    z-index: 1;
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    min-height: 200px;
-    background: #f0f2f5;
+      position: relative;   /* 让 z-index 生效，盖住占位文字 */
+      z-index: 1;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      min-height: 200px;
+      background: #f0f2f5;
+   pointer-events: none;  
+  -webkit-user-drag: none;
+  user-select: none;  
   }
 
   .figure .caption {
@@ -194,5 +197,13 @@
     </div>
   </div>
 </div>
+<script>
+      document.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('.figure')) 
+        {
+          e.preventDefault();
+        }
+      });
+</script>
 </body>
 </html>
