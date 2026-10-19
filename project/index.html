@@ -45,8 +45,21 @@
     margin: 18px 0;
     text-align: center;
   }
+ .figure::before {
+  content: "图片加载中… 或用电脑打开";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 0;
+}
   .figure img {
     max-width: 100%;
+    z-index: 1;
     height: auto;
     border-radius: 8px;
     border: 1px solid #e5e7eb;
@@ -76,7 +89,7 @@
   <h1>项目经历</h1>
   <h2>热连轧分区冷却装置及测控系统</h2>
 
-  <h3>一、装置设计与搭建</h3>
+  <h3>一、装置设计与搭建（独立完成200万项目）</h3>
   <p>使用 SolidWorks 独立完成热轧分区冷却模拟装置的结构设计与搭建。</p>
 
   <div class="grid-2">
