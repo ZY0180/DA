@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>热连轧分区冷却装置及测控系统</title>
+
+<link rel="preload" as="image"
+      href="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/6.webp"
+      fetchpriority="high">
+
 <style>
   * { box-sizing: border-box; }
   body {
@@ -24,7 +29,7 @@
     padding: 28px 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,.06);
   }
-   h1 {
+  h1 {
     font-size: 25px;
     margin: 0 0 10px;
   }
@@ -41,42 +46,59 @@
   p { margin: 0 0 14px; }
   ul { padding-left: 20px; }
   li { margin-bottom: 8px; }
+
   .figure {
+    position: relative;
     margin: 18px 0;
     text-align: center;
+    background: #f0f2f5;
+    border-radius: 8px;
+    min-height: 200px;
   }
- .figure::before {
-  content: "图片加载中… 或用电脑打开";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-  font-size: 14px;
-  pointer-events: none;
-  z-index: 0;
-}
+
+  .figure::before {
+    content: "图片加载中… 或用电脑打开";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* 图片加载完成后隐藏占位文字 */
+  .figure.loaded::before {
+    display: none;
+  }
+
   .figure img {
-    max-width: 100%;
+    position: relative;   /* 让 z-index 生效，盖住占位文字 */
     z-index: 1;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     border: 1px solid #e5e7eb;
-    /* 图片未加载完时，先占位，避免布局跳动 */
     min-height: 200px;
     background: #f0f2f5;
   }
+
   .figure .caption {
     font-size: 13px;
     color: #666;
     margin-top: 6px;
   }
+
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 14px;
   }
+
   @media (max-width: 600px) {
     body { padding: 10px; }
     .container { padding: 18px 14px; }
@@ -95,9 +117,12 @@
   <div class="grid-2">
     <div class="figure">
       <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/6.webp"
-       alt="装置设计图"
+           alt="装置设计图"
            loading="eager"
-           width="800" height="600">
+           fetchpriority="high"
+           decoding="async"
+           width="800" height="600"
+           onload="this.closest('.figure').classList.add('loaded')">
     </div>
   </div>
 
@@ -109,7 +134,9 @@
       <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/30.webp"
            alt="软件界面"
            loading="lazy"
-           width="800" height="600">
+           decoding="async"
+           width="800" height="600"
+           onload="this.closest('.figure').classList.add('loaded')">
     </div>
   </div>
 
@@ -123,13 +150,16 @@
       <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/31.webp"
            alt="数据分析图"
            loading="lazy"
-           width="800" height="600">
+           decoding="async"
+           width="800" height="600"
+           onload="this.closest('.figure').classList.add('loaded')">
     </div>
   </div>
- <h2>智能板形测控</h2>
+
+  <h2>智能板形测控</h2>
 
   <h3>一、传感器安装</h3>
-   <ul>
+  <ul>
     <li>使用 SolidWorks 完成一些零部件的建模以及对传感器进行安装。</li>
     <li>对于传感器进行标定。</li>
   </ul>
@@ -137,25 +167,30 @@
   <div class="grid-2">
     <div class="figure">
       <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/21.webp"
-       alt="板形辊实物图"
+           alt="板形辊实物图"
            loading="eager"
-           width="800" height="600">
+           decoding="async"
+           width="800" height="600"
+           onload="this.closest('.figure').classList.add('loaded')">
     </div>
   </div>
- <h2>镁合金高效及成型工艺及设备</h2>
+
+  <h2>镁合金高效及成型工艺及设备</h2>
 
   <h3>一、镁合金轧制</h3>
   <ul>
-   <li>参与四辊可逆电轧的调试与轧制工作，通过调整轧制力、压下率及电流密度等工艺参数，针对难变形金属带材进行轧制工艺优化。</li>
-   <li>以较低成本与较短时间实现了良好的成型率与生产效率。</li>
+    <li>参与四辊可逆电轧的调试与轧制工作，通过调整轧制力、压下率及电流密度等工艺参数，针对难变形金属带材进行轧制工艺优化。</li>
+    <li>以较低成本与较短时间实现了良好的成型率与生产效率。</li>
   </ul>
 
   <div class="grid-2">
     <div class="figure">
       <img src="https://cdn.jsdelivr.net/gh/ZY0180/DA@main/project/33.webp"
-       alt="镁合金轧制实物图"
+           alt="镁合金轧制实物图"
            loading="eager"
-           width="800" height="600">
+           decoding="async"
+           width="800" height="600"
+           onload="this.closest('.figure').classList.add('loaded')">
     </div>
   </div>
 </div>
